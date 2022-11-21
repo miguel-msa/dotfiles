@@ -1,5 +1,5 @@
-require "options"
 require "keymaps"
+require "options"
 require "plugins"
 require "colorscheme"
-require "cmp"
+require "_cmp"
