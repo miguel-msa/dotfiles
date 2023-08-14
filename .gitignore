@@ -4,6 +4,10 @@
 
 # Except
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+!.tmux.conf
+>>>>>>> afc8b69 (fix: gitignore for this branch)
 !README.md
 !dotfiles
 !dotfiles/*
