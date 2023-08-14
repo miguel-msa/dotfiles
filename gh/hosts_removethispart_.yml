@@ -1,0 +1,4 @@
+github.com:
+    user: miguel-msa
+    oauth_token: PUT_TOKEN_HERE
+    git_protocol: https

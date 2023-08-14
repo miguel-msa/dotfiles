@@ -3,11 +3,6 @@
 
 # Except
 !README.md
-!init.lua
-!lazy-lock.json
-!lua
-!lsp
-!lsp/*
 
 # Compiled Lua sources
 luac.out
