@@ -3,6 +3,7 @@
 *
 
 # Except
+!.tmux.conf
 !README.md
 
 # Compiled Lua sources
