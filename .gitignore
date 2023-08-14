@@ -2,20 +2,6 @@
 */
 *
 
-# Except
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-!.tmux.conf
->>>>>>> afc8b69 (fix: gitignore for this branch)
-!README.md
-!dotfiles
-!dotfiles/*
-!dotfiles/**
-=======
-!.tmux.conf
->>>>>>> 1c55570 (chore: changes to tmux config for repeated commands)
-
 # Compiled Lua sources
 luac.out
 
