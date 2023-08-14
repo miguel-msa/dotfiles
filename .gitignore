@@ -1,6 +1,8 @@
 # Ignore everything
 */
 gh/hosts.yml
+lsp
+nvim
 #hosts.yml
 
 # Except
