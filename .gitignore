@@ -1,8 +1,12 @@
 # Ignore everything
 */
+*
 
 # Except
 !README.md
+!dotfiles
+!dotfiles/*
+!dotfiles/**
 
 # Compiled Lua sources
 luac.out
