@@ -1,13 +1,13 @@
 # Ignore everything
 */
+gh/hosts.yml
+#hosts.yml
 
 # Except
 !README.md
-!init.lua
-!lazy-lock.json
-!lua
-!lsp
-!lsp/*
+!gh
+!gh/config.yml
+!gh/hosts_removethispart_.yml
 
 # Compiled Lua sources
 luac.out
