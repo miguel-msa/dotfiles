@@ -2,6 +2,10 @@
 */
 *
 
+# Except
+!nvim
+!nvim/*
+
 # Compiled Lua sources
 luac.out
 

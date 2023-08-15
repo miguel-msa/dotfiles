@@ -6,5 +6,3 @@
         git checkout -b nvim https://github.com/miguel-msa/dotfiles/tree/terminal_emulator
     ```
     2. move the _nvim_ folder inside _dotfiles_ to ~/.config and remove _dotfiles_ folder (keep _.git_ if desired)
-2. @ ~/nvim/init.lua
-    1. run _:source %_ to load the packages on lazy pkg managers
