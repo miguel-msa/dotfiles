@@ -1,6 +1,19 @@
 # Ignore everything
-*/
-*
+#*/
+#*
+/*
+#/*/
+
+# Except
+!/dotfiles/
+#/dotfiles/*
+!/dotfiles/nvim/
+#/dotfiles/nvim/*
+!/dotfiles/nvim/lua/
+/dotfiles/nvim/lua/*
+!/dotfiles/nvim/lua/core/
+#/dotfiles/nvim/lua/core/*
+!/dotfiles/nvim/lua/core/plugin_config/
 
 # Compiled Lua sources
 luac.out
