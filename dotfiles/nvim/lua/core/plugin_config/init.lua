@@ -7,4 +7,6 @@ require("core.plugin_config.telescope")
 require("core.plugin_config.completions")
 require("core.plugin_config.lsp_config")
 require("core.plugin_config.oil")
+require("core.plugin_config.autopairs")
+--require("core.plugin_config.autotag") TODO: get it from treesitter config
 require("core.plugin_config.copilot")

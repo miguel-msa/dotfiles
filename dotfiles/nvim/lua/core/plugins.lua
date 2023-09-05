@@ -41,7 +41,10 @@ local plugins = {
 
   'tpope/vim-commentary',
 
-  'windwp/nvim-autopairs',
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter"
+  },
   'windwp/nvim-ts-autotag',
 
   -- Detect tabstop and shiftwidth automatically
