@@ -112,6 +112,9 @@ local plugins = {
     end,
   },
 
+  -- harpoon
+  'ThePrimeagen/harpoon',
+
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
