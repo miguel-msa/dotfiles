@@ -124,6 +124,15 @@ local plugins = {
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
   },
+
+  -- alpha nvim
+  {
+    'goolord/alpha-nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+  },
 }
 local opts = {}
 
