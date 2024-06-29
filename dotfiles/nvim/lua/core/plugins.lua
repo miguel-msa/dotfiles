@@ -23,7 +23,8 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
   -- Colorscheme(s)
   'rebelot/kanagawa.nvim',
-  "EdenEast/nightfox.nvim",
+  'EdenEast/nightfox.nvim',
+  'rose-pine/neovim',
 
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
@@ -68,6 +69,9 @@ local plugins = {
   },
   'onsails/lspkind.nvim',
 
+  -- Session Manager
+  "rmagatti/auto-session",
+
   -- Useful plugin to show pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
   
@@ -86,15 +90,8 @@ local plugins = {
     },
   },
 
-  { -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help indent_blankline.txt`
-    opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
-    },
-  },
+  -- Add indentation guides even on blank lines
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
@@ -113,7 +110,7 @@ local plugins = {
   },
 
   -- harpoon
-  'ThePrimeagen/harpoon',
+  --'ThePrimeagen/harpoon',
 
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
