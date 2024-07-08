@@ -52,7 +52,15 @@ local plugins = {
   'tpope/vim-sleuth',
 
   -- Completion
-  'hrsh7th/nvim-cmp',
+  {
+    'hrsh7th/nvim-cmp',
+    -- todo: config crate autocomplete
+    --opts = function()
+    --    local M = require "plugins.config.cmp"
+    --    table.insert(M.sources, {name = "crates"})
+    --    return M
+    --end,
+  },
   'hrsh7th/cmp-nvim-lsp',
   'L3MON4D3/LuaSnip',
   'saadparwaiz1/cmp_luasnip',
@@ -61,7 +69,6 @@ local plugins = {
   "williamboman/mason-lspconfig.nvim",
   {
     "nvimdev/lspsaga.nvim",
- 
 	  -- 'nvim-telescope/telescope.nvim',
 	  -- tag = '0.1.0',
 			--
@@ -69,12 +76,25 @@ local plugins = {
   },
   'onsails/lspkind.nvim',
 
+  -- RUST
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function ()
+      vim.g.rustfmt_autosave = 1
+    end
+  },
+  "saecki/crates.nvim",
+
   -- Session Manager
-  "rmagatti/auto-session",
+  -- todo: configure this
+  --"rmagatti/auto-session",
+  
+  -- Code commenter helper
+    
 
   -- Useful plugin to show pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
-  
   -- TODO: pass this to /plugin_config/gitsigns.lua
   { -- Adds git releated signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',

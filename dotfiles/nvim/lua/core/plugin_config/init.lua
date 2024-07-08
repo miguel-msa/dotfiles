@@ -9,8 +9,11 @@ require("core.plugin_config.completions")
 require("core.plugin_config.lsp_config")
 require("core.plugin_config.oil")
 require("core.plugin_config.autopairs")
+--require("core.plugin_config.rust")
+--require("core.plugin_config.crates")
+--require("core.plugin_config.nvim_cmp")
 --require("core.plugin_config.autosession")
 --require("core.plugin_config.autotag") TODO: get it from treesitter config
 --require("core.plugin_config.harpoon")
-require("core.plugin_config.copilot")
+--require("core.plugin_config.copilot")
 

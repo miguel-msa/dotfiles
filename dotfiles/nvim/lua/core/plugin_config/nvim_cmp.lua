@@ -1,0 +1,7 @@
+--require'nvim_cmp'.setup({
+--  opts = function()
+--      local M = require "plugins.config.cmp"
+--      table.insert(M.sources, {name = "crates"})
+--      return M
+--  end,
+--})

@@ -1,6 +1,8 @@
 require("mason-lspconfig").setup()
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+local lspconfig = require("lspconfig")
+local util = require "lspconfig.util"
 
 require('lspsaga').setup({
   code_action_icon = "💡",
@@ -20,7 +22,7 @@ vim.keymap.set({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent
 vim.keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", { silent = true })
 vim.keymap.set("n", "<leader>f", "<cmd>Lspsaga finder<CR>", { silent = true }) --<C-c>k to close
 
-require("lspconfig").lua_ls.setup {
+lspconfig.lua_ls.setup {
   capabilities = capabilities,
   settings = {
     Lua = {
@@ -37,12 +39,21 @@ require("lspconfig").lua_ls.setup {
   }
 }
 
-require("lspconfig").tsserver.setup {
+lspconfig.tsserver.setup {
   capabilities = capabilities,
 }
-require("lspconfig").pyright.setup {
+lspconfig.pyright.setup {
   capabilities = capabilities,
 }
-require'lspconfig'.rust_analyzer.setup {
+lspconfig.rust_analyzer.setup({
   capabilities = capabilities,
-}
+  filetypes = {"rust"},
+  root_dir = util.root_pattern("Cargo.toml"),
+  settings = {
+    ['rust-analyzer'] = {
+      cargo = {
+        allFeatures = true,
+      },
+    },
+  },
+})
