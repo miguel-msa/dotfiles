@@ -44,8 +44,14 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
+-- Write/Save
+keymap("n", "<leader>w", ":w<cr>", opts)
+-- Quit
+keymap("n", "<leader>q", ":q<cr>", opts)
+-- Write and Quit
+keymap("n", "<leader>wq", ":wq<cr>", opts)
+
 -- Insert --
--- Press jj fast to enter
 keymap("i", "jj", "<ESC>", opts)
 
 -- Visual --
