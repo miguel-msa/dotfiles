@@ -106,8 +106,8 @@ bar:
       label_high: "🔊{volume_level}%"
       label_mute: "🔊{volume_level}%"
     - type: "weather"
-      latitude: 50.5050
-      longitude: 50.5050
+      latitude: 38.7748
+      longitude: -9.1010
       label: "{temperature_celsius}°C"
       label_sun: "☀️ {temperature_celsius}°C"
       label_moon: "🌙 {temperature_celsius}°C"
@@ -139,6 +139,7 @@ workspaces:
   - name: "5"
     display_name: "5) ⌨ terminal"
   - name: "6"
+    display_name: "6) 🛢 db"
   - name: "7"
     display_name: "7) 🎮 gaming"
   - name: "8"
