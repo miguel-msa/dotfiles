@@ -109,6 +109,7 @@ alias tmux='tmux -2'
 alias expl="explorer.exe ."
 alias nv="nvim"
 alias codespace="cd ~/../../mnt/c/Users/migue/OneDrive/Code"
+alias lzg="lazygit"
 # --------------------------------------------------------------------
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
