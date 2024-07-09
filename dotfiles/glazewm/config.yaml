@@ -141,8 +141,9 @@ workspaces:
   - name: "6"
     display_name: "6) 🛢 db"
   - name: "7"
-    display_name: "7) 🎮 gaming"
+    display_name: "7) 🐳 docker"
   - name: "8"
+    display_name: "8) 🎮 gaming"
   - name: "9"
     display_name: "9) ⌨ glazewm"
 
