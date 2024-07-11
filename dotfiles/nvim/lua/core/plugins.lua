@@ -53,7 +53,7 @@ local plugins = {
 
   -- Completion
   {
-    'hrsh7th/nvim-cmp',
+    'hrsh7th/nvim-cmp', -- completion engine
     -- todo: config crate autocomplete
     --opts = function()
     --    local M = require "plugins.config.cmp"
@@ -61,13 +61,13 @@ local plugins = {
     --    return M
     --end,
   },
-  'hrsh7th/cmp-nvim-lsp',
-  'L3MON4D3/LuaSnip', -- REVIEW
-  'saadparwaiz1/cmp_luasnip', -- REVIEW
-  "rafamadriz/friendly-snippets",
+  'hrsh7th/cmp-nvim-lsp', -- lsp source
+  'L3MON4D3/LuaSnip', -- snippets engine
+  'saadparwaiz1/cmp_luasnip', -- luasnip completion source for nvim-cmp
+  "rafamadriz/friendly-snippets", -- snippets collection
 
   "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim",
+  "williamboman/mason-lspconfig.nvim", -- extension to mason.nvim for lspconfig ease of use
   "neovim/nvim-lspconfig",
   {
     "nvimdev/lspsaga.nvim",
