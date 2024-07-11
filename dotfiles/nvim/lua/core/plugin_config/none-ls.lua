@@ -24,10 +24,10 @@ local opts = {
   end
 }
 
-return opts
-
--- On first setup
--- Install go pkgs:
-  -- 1. go install -v github.com/incu6us/goimports-reviser/v3@latest
-  -- 2. go install mvdan.cc/gofumpt@latest
-  -- 3. go install github.com/segmentio/golines@latest
+require'null-ls'.setup({
+  ft = "go",
+  config = opts
+  --config = function()
+  --    return opts
+  --end,
+})

@@ -87,14 +87,9 @@ local plugins = {
   "saecki/crates.nvim",
 
   -- Go
+  "nvimtools/none-ls.nvim",
   {
-    "jose-elias-alvarez/null-ls.nvim",
-    ft = "go",
-    opts = function()
-      return require "custom.configs.null-ls"
-    end
-  },
-  {
+    -- todo: config this in plugin_config/gopher.lua
     -- reminder: :GoTagAdd json
     -- :GoIfErr
     "olexsmir/gopher.nvim",
