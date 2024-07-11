@@ -5,6 +5,7 @@ require'nvim-treesitter.configs'.setup {
     "vim",
     "lua",
     "c", "rust",
+    "go",
     "java", "javascript", "typescript", "python", "c_sharp",
     "sql", "regex",
     "html", "css", "scss",

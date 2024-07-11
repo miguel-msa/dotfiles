@@ -86,6 +86,27 @@ local plugins = {
   },
   "saecki/crates.nvim",
 
+  -- Go
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    ft = "go",
+    opts = function()
+      return require "custom.configs.null-ls"
+    end
+  },
+  {
+    -- reminder: :GoTagAdd json
+    -- :GoIfErr
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    config = function(_, opts)
+      require("gopher").setup(opts)
+    end,
+    build = function()
+      vim.cmd [[silent! GoInstallDeps]]
+    end
+  },
+
   -- Session Manager
   -- todo: configure this
   --"rmagatti/auto-session",
