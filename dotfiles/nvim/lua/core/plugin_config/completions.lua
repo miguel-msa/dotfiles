@@ -13,7 +13,6 @@ cmp.event:on(
 cmp.setup({
   mapping = cmp.mapping.preset.insert({
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-o>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
@@ -42,5 +41,8 @@ cmp.setup({
         latex_symbols = "[Latex]",
       })
     }),
+  },
+  window = {
+    completion = cmp.config.window.bordered()
   }
 })

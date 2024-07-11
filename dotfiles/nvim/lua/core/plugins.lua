@@ -62,11 +62,13 @@ local plugins = {
     --end,
   },
   'hrsh7th/cmp-nvim-lsp',
-  'L3MON4D3/LuaSnip',
-  'saadparwaiz1/cmp_luasnip',
+  'L3MON4D3/LuaSnip', -- REVIEW
+  'saadparwaiz1/cmp_luasnip', -- REVIEW
+  "rafamadriz/friendly-snippets",
+
   "williamboman/mason.nvim",
-  "neovim/nvim-lspconfig",
   "williamboman/mason-lspconfig.nvim",
+  "neovim/nvim-lspconfig",
   {
     "nvimdev/lspsaga.nvim",
 	  -- 'nvim-telescope/telescope.nvim',

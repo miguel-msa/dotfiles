@@ -18,8 +18,8 @@ require('lspsaga').setup({
 vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<cr>", { silent = true })
 vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<cr>', { silent = true })
 vim.keymap.set({"n","t"}, "<leader>t", "<cmd>Lspsaga term_toggle<cr>", { silent = true})
-vim.keymap.set({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
-vim.keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", { silent = true })
+--vim.keymap.set({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+vim.keymap.set("n", "<leader>r", "<cmd>Lspsaga rename<CR>", { silent = true })
 vim.keymap.set("n", "<leader>f", "<cmd>Lspsaga finder<CR>", { silent = true }) --<C-c>k to close
 
 lspconfig.lua_ls.setup {
