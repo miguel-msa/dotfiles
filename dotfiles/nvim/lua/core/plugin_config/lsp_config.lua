@@ -4,6 +4,19 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protoc
 local lspconfig = require("lspconfig")
 local util = require "lspconfig.util"
 
+--if vim.lsp.get_clients then
+--
+--   clients = vim.lsp.get_clients({
+--     bufnr = bufnr,
+--
+--   })
+-- else
+--   ---@diagnostic disable-next-line: deprecated 
+--   clients = vim.lsp.get_active_clients({
+--     bufnr = bufnr,
+--   })
+--end
+
 require('lspsaga').setup({
   code_action_icon = "💡",
   symbol_in_winbar = {
@@ -39,7 +52,11 @@ lspconfig.lua_ls.setup {
   }
 }
 
-lspconfig.tsserver.setup {
+--lspconfig.tsserver.setup {
+--  capabilities = capabilities,
+--}
+
+lspconfig.ts_ls.setup {
   capabilities = capabilities,
 }
 lspconfig.pyright.setup {
