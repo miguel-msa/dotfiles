@@ -17,4 +17,3 @@ require("core.plugin_config.autopairs")
 --require("core.plugin_config.autotag") TODO: get it from treesitter config
 --require("core.plugin_config.harpoon")
 --require("core.plugin_config.copilot")
-
