@@ -1,12 +1,19 @@
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+
 local cmp = require("cmp")
 local lspkind = require("lspkind")
 
 require("luasnip.loaders.from_vscode").lazy_load()
 
+cmp.event:on(
+  'confirm_done',
+
+  cmp_autopairs.on_confirm_done()
+)
+
 cmp.setup({
   mapping = cmp.mapping.preset.insert({
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-o>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
@@ -35,5 +42,8 @@ cmp.setup({
         latex_symbols = "[Latex]",
       })
     }),
+  },
+  window = {
+    completion = cmp.config.window.bordered()
   }
 })
