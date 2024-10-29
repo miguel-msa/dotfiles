@@ -7,4 +7,5 @@
 I am still figuring out the best way to organize everything and how I want the workflow to be, branches may be created/deleted unexpectedly
 
 ### todo:
-[ ] find a better diffview/commit merge solution (or see what can be improved with vim-fugitive or lazygit)
+- [ ] find a better diffview/commit merge solution (or see what can be improved with vim-fugitive or lazygit)
+- [ ] add code format on save
