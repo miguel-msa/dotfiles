@@ -21,24 +21,14 @@ vim.opt.rtp:prepend(lazypath)
 
 
 local plugins = {
-  -- Colorscheme(s)
-  'rebelot/kanagawa.nvim',
-  'EdenEast/nightfox.nvim',
-  'rose-pine/neovim',
-  -- todo: put this into colorscheme.lua
-  {
-    'sainnhe/gruvbox-material',
-    lazy = false,
+  -- Nice colorschemes
+  --'rebelot/kanagawa.nvim',
+  --'EdenEast/nightfox.nvim',
+  --'rose-pine/neovim',
+  --'neanias/everforest-nvim',
+  'sainnhe/gruvbox-material',
 
-    priority = 1000,
-    config = function()
-      -- Optionally configure and load the colorscheme
-      -- directly inside the plugin declaration.
-
-      vim.g.gruvbox_material_enable_italic = true
-      vim.cmd.colorscheme('gruvbox-material')
-    end
-    },
+  "christoomey/vim-tmux-navigator",
 
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
@@ -46,8 +36,6 @@ local plugins = {
   'stevearc/oil.nvim',
 
   'nvim-lualine/lualine.nvim',
-
-  "zbirenbaum/copilot.lua",
 
   -- Git related plugins
   'preservim/vimux',
@@ -118,15 +106,8 @@ local plugins = {
     end
   },
 
-  -- Session Manager
-  -- todo: configure this
-  --"rmagatti/auto-session",
-  
-  -- Code commenter helper
-    
+  'folke/which-key.nvim',
 
-  -- Useful plugin to show pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
   -- TODO: pass this to /plugin_config/gitsigns.lua
   { -- Adds git releated signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -142,17 +123,16 @@ local plugins = {
     },
   },
 
-  -- Add indentation guides even on blank lines
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
-  -- Fuzzy Finder (files, lsp, etc)
-  { 'nvim-telescope/telescope.nvim', version = '*', dependencies = { 'nvim-lua/plenary.nvim' } },
+  { 'nvim-telescope/telescope.nvim',
+    version = '*', 
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
 
-  -- Fuzzy Finder Algorithm which requires local dependencies to be built.
-  -- Only load if `make` is available. Make sure to have the system
   {
     'nvim-telescope/telescope-fzf-native.nvim',
     build = 'make',
@@ -160,9 +140,6 @@ local plugins = {
       return vim.fn.executable 'make' == 1
     end,
   },
-
-  -- harpoon
-  --'ThePrimeagen/harpoon',
 
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
@@ -174,7 +151,6 @@ local plugins = {
     end,
   },
 
-  -- alpha nvim
   {
     'goolord/alpha-nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -182,6 +158,8 @@ local plugins = {
         require'alpha'.setup(require'alpha.themes.startify'.config)
     end
   },
+
+  "folke/todo-comments.nvim",
 }
 local opts = {}
 

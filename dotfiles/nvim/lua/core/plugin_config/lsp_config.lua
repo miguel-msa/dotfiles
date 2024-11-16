@@ -93,6 +93,13 @@ lspconfig.ts_ls.setup {
 -- No need to set `hybridMode` to `true` as it's the default value
 lspconfig.volar.setup {}
 
+lspconfig.html.setup{ -- Html
+  capabilities = capabilities,
+}
+lspconfig.cssls.setup{ -- css
+  capabilities = capabilities,
+}
+
 
 lspconfig.pyright.setup { -- Python
   capabilities = capabilities,

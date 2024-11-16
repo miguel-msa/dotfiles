@@ -12,6 +12,8 @@ require'mason'.setup({
       "gofumpt",
       "typescript-language-server",
       "vue-language-server",
+      "html",
+      "cssls"
     },
   },
 })
