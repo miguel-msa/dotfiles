@@ -163,7 +163,12 @@ local plugins = {
 }
 local opts = {}
 
-require('lazy').setup(
-  plugins,
-  opts
-)
+require("lazy").setup({ plugins, { import = "core.plugin_config.markdown-preview" } }, {
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    notify = false,
+  },
+})
