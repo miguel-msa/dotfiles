@@ -28,14 +28,18 @@ require('lspsaga').setup({
   },
 })
 
-vim.keymap.set("n", "gp", "<cmd>Lspsaga peek_definition<cr>", { silent = true })
+local keymap = vim.keymap -- for conciseness
+
+keymap.set("n", "gp", "<cmd>Lspsaga peek_definition<cr>", { silent = true })
 --vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<cr>', { silent = true })
 --vim.keymap.set({"n","t"}, "<C-w>t", "<cmd>Lspsaga term_toggle<cr>", { silent = true})
-vim.keymap.set({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+keymap.set({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
 --vim.keymap.set("n", "<leader>r", "<cmd>Lspsaga rename<CR>", { silent = true })
-vim.keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>", { silent = true }) --<C-c>k to close
+keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>", { silent = true }) --<C-c>k to close
 
-local keymap = vim.keymap -- for conciseness
+keymap.set("n", "ge", "<cmd>lua vim.diagnostic.open_float()<CR>")
+
+
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
