@@ -158,11 +158,13 @@ lspconfig.cssls.setup{ -- css
   capabilities = capabilities,
 }
 
-
-lspconfig.pyright.setup { -- Python
+-- Python
+lspconfig.pyright.setup {
   capabilities = capabilities,
 }
-lspconfig.rust_analyzer.setup({ -- Rust
+
+-- Rust
+lspconfig.rust_analyzer.setup({
   capabilities = capabilities,
   filetypes = {"rust"},
   root_dir = util.root_pattern("Cargo.toml"),
@@ -174,7 +176,9 @@ lspconfig.rust_analyzer.setup({ -- Rust
     },
   },
 })
-lspconfig.gopls.setup({ -- Go
+
+-- Go
+lspconfig.gopls.setup({
   capabilities = capabilities,
   cmd = {"gopls"},
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
@@ -188,4 +192,9 @@ lspconfig.gopls.setup({ -- Go
       }
     }
   }
+})
+
+-- C#
+lspconfig.omnisharp.setup({
+  capabilities = capabilities,
 })
