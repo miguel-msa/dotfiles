@@ -1,9 +1,3 @@
-require("everforest-nvim").setup({
-    lazy = false,
-
-    priority = 1000,
-    config = function()
-      vim.g.everforest_enable_italic = true
-      vim.cmd.colorscheme('everforest')
-    end
-})
+vim.g.everforest_enable_italic = true
+vim.g.everforest_background = "medium" -- Example of another option
+vim.cmd.colorscheme("everforest")

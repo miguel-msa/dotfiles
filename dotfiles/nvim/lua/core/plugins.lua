@@ -23,9 +23,9 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
   -- Nice colorschemes
   --'rebelot/kanagawa.nvim',
-  --'EdenEast/nightfox.nvim',
+  'EdenEast/nightfox.nvim',
   --'rose-pine/neovim',
-  --'neanias/everforest-nvim',
+  'neanias/everforest-nvim',
   'sainnhe/gruvbox-material',
 
   "christoomey/vim-tmux-navigator",
