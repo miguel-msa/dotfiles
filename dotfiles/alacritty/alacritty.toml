@@ -1,3 +1,6 @@
+[env]
+TERM = "xterm-256color"
+
 # Colors (Everforest Dark)
 
 # Default colors
@@ -34,9 +37,11 @@ shape = "Beam"
 shape = "Block"
 
 [font]
-normal.family = "IosevkaTerm Nerd Font Mono"
-normal.style = "Light"
-size = 16
+#normal.family = "IosevkaTerm Nerd Font Mono"
+normal.family = "JetBrainsMono Nerd Font"
+normal.style = "Thin"
+size = 14
+offset.y = 1
 
 [window.dimensions]
 columns = 185
