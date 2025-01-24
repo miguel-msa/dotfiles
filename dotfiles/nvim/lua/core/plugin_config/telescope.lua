@@ -6,3 +6,5 @@ vim.keymap.set('n', '<Space>sa', builtin.live_grep, {})
 
 vim.keymap.set('n', '<Space><Space>', builtin.oldfiles, {})
 vim.keymap.set('n', '<Space>fh', builtin.help_tags, {})
+
+vim.keymap.set('n', '<Space>ds', builtin.lsp_document_symbols, {})
