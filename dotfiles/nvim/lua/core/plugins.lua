@@ -19,14 +19,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
 local plugins = {
   -- Nice colorschemes
   --'rebelot/kanagawa.nvim',
   'EdenEast/nightfox.nvim',
   --'rose-pine/neovim',
-  'neanias/everforest-nvim',
+  --'neanias/everforest-nvim',
   'sainnhe/gruvbox-material',
+  require("core.plugin_config.colorscheme_config.everforest-nvim"),
+  --require('core.plugin_config.colorscheme_config.shadow'),
 
   "christoomey/vim-tmux-navigator",
 

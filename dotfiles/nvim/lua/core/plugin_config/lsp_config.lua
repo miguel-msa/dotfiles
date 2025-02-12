@@ -198,3 +198,8 @@ lspconfig.gopls.setup({
 lspconfig.omnisharp.setup({
   capabilities = capabilities,
 })
+
+-- SQL
+lspconfig.sqlls.setup({
+  capabilities = capabilities,
+})

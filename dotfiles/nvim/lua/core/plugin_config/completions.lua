@@ -21,7 +21,10 @@ cmp.setup({
     }),
   snippet = {
     expand = function(args)
-      require('luasnip').lsp_expand(args.body)
+      local cleaned_body = args.body:gsub("%${%d+:([^}]+)}", "%1"):gsub("%${%d+}", "")
+      require('luasnip').lsp_expand(cleaned_body)
+      vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Left><Left>", true, false, true), "n", false)
+      --require('luasnip').lsp_expand(args.body)
     end,
   },
   sources = cmp.config.sources({
