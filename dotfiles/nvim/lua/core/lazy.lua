@@ -23,20 +23,15 @@ local plugins = {
   -- Nice colorschemes
   --'rebelot/kanagawa.nvim',
   'EdenEast/nightfox.nvim',
-  --'rose-pine/neovim',
   --'neanias/everforest-nvim',
   'sainnhe/gruvbox-material',
-  require("core.plugin_config.colorscheme_config.everforest-nvim"),
+  --require("core.plugin_config.colorscheme_config.everforest-nvim"),
   --require('core.plugin_config.colorscheme_config.shadow'),
-
-  "christoomey/vim-tmux-navigator",
+  --require("core.plugin_config.colorscheme_config.nordic"),
+  --require("core.plugin_config"),
 
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
-
-  'stevearc/oil.nvim',
-
-  'nvim-lualine/lualine.nvim',
 
   -- Git related plugins
   'preservim/vimux',
@@ -45,67 +40,9 @@ local plugins = {
 
   'tpope/vim-commentary',
 
-  {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter"
-  },
-  'windwp/nvim-ts-autotag',
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
-
-  -- Completion
-  {
-    'hrsh7th/nvim-cmp', -- completion engine
-    -- todo: config crate autocomplete
-    --opts = function()
-    --    local M = require "plugins.config.cmp"
-    --    table.insert(M.sources, {name = "crates"})
-    --    return M
-    --end,
-  },
-  'hrsh7th/cmp-nvim-lsp', -- lsp source
-  'L3MON4D3/LuaSnip', -- snippets engine
-  'saadparwaiz1/cmp_luasnip', -- luasnip completion source for nvim-cmp
-  "rafamadriz/friendly-snippets", -- snippets collection
-
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim", -- extension to mason.nvim for lspconfig ease of use
-  "neovim/nvim-lspconfig",
-  {
-    "nvimdev/lspsaga.nvim",
-	  -- 'nvim-telescope/telescope.nvim',
-	  -- tag = '0.1.0',
-			--
-	  -- dependencies = { {'nvim-lua/plenary.nvim'} }
-  },
-  'onsails/lspkind.nvim',
-
-  -- RUST
-  {
-    "rust-lang/rust.vim",
-    ft = "rust",
-    init = function ()
-      vim.g.rustfmt_autosave = 1
-    end
-  },
-  "saecki/crates.nvim",
-
-  -- Go
-  "nvimtools/none-ls.nvim",
-  {
-    -- todo: config this in plugin_config/gopher.lua
-    -- reminder: :GoTagAdd json
-    -- :GoIfErr
-    "olexsmir/gopher.nvim",
-    ft = "go",
-    config = function(_, opts)
-      require("gopher").setup(opts)
-    end,
-    build = function()
-      vim.cmd [[silent! GoInstallDeps]]
-    end
-  },
 
   'folke/which-key.nvim',
 
@@ -159,12 +96,20 @@ local plugins = {
         require'alpha'.setup(require'alpha.themes.startify'.config)
     end
   },
-
-  "folke/todo-comments.nvim",
 }
 local opts = {}
 
-require("lazy").setup({ plugins, { import = "core.plugin_config.markdown-preview" } }, {
+--require("lazy").setup({ plugins, { import = "core.plugin_config.markdown-preview" } }, {
+--  checker = {
+--    enabled = true,
+--    notify = false,
+--  },
+--  change_detection = {
+--    notify = false,
+--  },
+--})
+
+require("lazy").setup({ { import = "core.plugins" }, { import = "core.plugins.lsp"} }, {
   checker = {
     enabled = true,
     notify = false,

@@ -1,4 +1,5 @@
-require("vim-tmux-navigator").setup({
+return {
+  "christoomey/vim-tmux-navigator",
   cmd = {
     "TmuxNavigateLeft",
     "TmuxNavigateDown",
@@ -16,4 +17,4 @@ require("vim-tmux-navigator").setup({
     { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
     { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
   },
-})
+}

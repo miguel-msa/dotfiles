@@ -1,4 +1,5 @@
-require("rose-pine").setup({
+return {
+    'rose-pine/neovim',
     variant = "auto", -- auto, main, moon, or dawn
     dark_variant = "main", -- main, moon, or dawn
     dim_inactive_windows = false,
@@ -66,4 +67,4 @@ require("rose-pine").setup({
         --     highlight.fg = palette.foam
         -- end
     end,
-})
+}
