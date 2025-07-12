@@ -8,4 +8,4 @@ I am still figuring out the best way to organize everything and how I want the w
 
 ### todo:
 * [ ] find a better diffview/commit merge solution (or see what can be improved with vim-fugitive or lazygit)
-* [ ] config aerospace
+* [ ] config aerospace (use Raycast instead?)
