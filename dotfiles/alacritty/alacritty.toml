@@ -1,0 +1,55 @@
+[env]
+TERM = "xterm-256color"
+
+[scrolling]
+multiplier = 1
+
+# Colors (nordic)
+
+[colors.primary]
+background = '#242933'
+foreground = '#BBBDAF'
+
+[colors.normal]
+black = '#191C1D'
+red = '#BD6062'
+green = '#A3D6A9'
+yellow = '#F0DFAF'
+blue = '#8FB4D8'
+magenta = '#C7A9D9'
+cyan = '#B6D7A8'
+white = '#BDC5BD'
+
+[colors.bright]
+black = '#727C7C'
+red = '#D18FAF'
+green = '#B7CEB0'
+yellow = '#BCBCBC'
+blue = '#E0CF9F'
+magenta = '#C7A9D9'
+cyan = '#BBDA97'
+white = '#BDC5BD'
+
+[colors.selection]
+text = '#000000'
+background = '#F0DFAF'
+
+[cursor.style]
+shape = "Beam"
+
+[cursor.vi_mode_style]
+shape = "Block"
+
+[font]
+#normal.family = "IosevkaTerm Nerd Font Mono"
+normal.family = "JetBrainsMono Nerd Font"
+normal.style = "Thin"
+size = 14
+offset.y = 1
+
+[window.dimensions]
+columns = 185
+lines = 50
+
+[window.padding]
+y = 0

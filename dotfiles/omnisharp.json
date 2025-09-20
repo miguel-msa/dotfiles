@@ -1,0 +1,24 @@
+{
+  "RoslynExtensionsOptions": {
+    "enableAnalyzers": true
+    "LocationPaths": [
+            "/Users/miguelalbuquerque/.vscode/extensions/josefpihrt-vscode.roslynator-4.12.7/roslyn/common",
+            "/Users/miguelalbuquerque/.vscode/extensions/josefpihrt-vscode.roslynator-4.12.7/roslyn/analyzers",
+            "/Users/miguelalbuquerque/.vscode/extensions/josefpihrt-vscode.roslynator-4.12.7/roslyn/refactorings",
+            "/Users/miguelalbuquerque/.vscode/extensions/josefpihrt-vscode.roslynator-4.12.7/roslyn/fixes"
+    ]
+  },
+  "FormattingOptions": {
+    "enableEditorConfigSupport": true
+  },
+  "RoslynAnalyzers": {
+    "diagnosticOptions": {
+      "IDE0007": {
+        "severity": "none"
+      },
+      "IDE0008": {
+        "severity": "none"
+      }
+    }
+  }
+}
