@@ -4,7 +4,6 @@ return {
 	config = function()
 		require("mason-lspconfig").setup({
 			ensure_installed = {
-				"tsserver",
 				"html",
 				"cssls",
 				"tailwindcss",
@@ -14,7 +13,6 @@ return {
 				"emmet_ls",
 				"prismals",
 				"pyright",
-				"sqlfluff",
 				"gopls",
 				"vtsls",
 				"vue_ls",

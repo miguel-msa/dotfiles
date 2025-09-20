@@ -274,19 +274,5 @@ return {
 				})
 			end,
 		}
-
-		mason_lspconfig.setup({
-			--ensure_installed = {
-			--	--	"terraformls",
-			--	--	"bashls",
-			--	--	"vtsls",
-			--	--	"vue_ls",
-			--	--	--"ltex",
-			--	"roslyn",
-			--},
-			handlers = handlers,
-		})
-		-- non-default mson servers
-		--handlers["roslyn"]()
 	end,
 }
