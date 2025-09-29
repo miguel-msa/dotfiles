@@ -13,6 +13,7 @@ return {
 				"sqlfluff",
 				"sql-formatter",
 				"roslyn",
+				"csharpier",
 			},
 		})
 	end,
