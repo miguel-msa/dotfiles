@@ -167,6 +167,9 @@ return {
 			["roslyn"] = function()
 				vim.lsp.enable("roslyn")
 			end,
+			["buf_ls"] = function()
+				vim.lsp.enable("buf_ls")
+			end,
 			["sqls"] = function()
 				lspconfig["sqls"].setup({
 					capabilities = capabilities,
