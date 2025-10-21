@@ -129,8 +129,33 @@ return {
 				})
 			end,
 			["pyright"] = function()
+				-- get from poetry which venv belongs to current project
+				local venv = vim.fn.trim(vim.fn.system("poetry env info --path 2>/dev/null"))
+				if venv == "" then
+					venv = nil
+				end
+
+				-- build the full path to the interpreter inside venv
+				local python_path = venv and (venv .. "/bin/python") or vim.fn.exepath("python3") -- fallback
+
+				-- inherit venv for the whole session
+				if venv then
+					vim.env.VIRTUAL_ENV = venv
+					vim.env.PATH = venv .. "/bin:" .. vim.env.PATH
+				end
+
 				lspconfig["pyright"].setup({
 					capabilities = capabilities,
+					settings = {
+						python = {
+							pythonPath = python_path, -- <-- Poetry + pyenv interpreter
+							analysis = {
+								autoSearchPaths = true,
+								useLibraryCodeForTypes = true,
+								diagnosticMode = "openFilesOnly",
+							},
+						},
+					},
 				})
 			end,
 			["rust_analyzer"] = function()
@@ -148,21 +173,22 @@ return {
 				})
 			end,
 			["gopls"] = function()
-				lspconfig["gopls"].setup({
-					capabilities = capabilities,
-					cmd = { "gopls" },
-					filetypes = { "go", "gomod", "gowork", "gotmpl" },
-					root_dir = util.root_pattern("go.work", "go.mod", ".git"),
-					settings = {
-						gopls = {
-							completeUnimported = true,
-							usePlaceholders = true,
-							analyses = {
-								unusedparams = true,
-							},
-						},
-					},
-				})
+				--lspconfig["gopls"].setup({
+				--	capabilities = capabilities,
+				--	cmd = { "gopls" },
+				--	filetypes = { "go", "gomod", "gowork", "gotmpl" },
+				--	root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+				--	settings = {
+				--		gopls = {
+				--			completeUnimported = true,
+				--			usePlaceholders = true,
+				--			analyses = {
+				--				unusedparams = true,
+				--			},
+				--		},
+				--	},
+				--})
+				vim.lsp.enable("gopls")
 			end,
 			["roslyn"] = function()
 				vim.lsp.enable("roslyn")

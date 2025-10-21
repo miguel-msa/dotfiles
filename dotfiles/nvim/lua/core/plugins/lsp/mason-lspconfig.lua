@@ -19,7 +19,7 @@ return {
 				"terraformls",
 				"bashls",
 				"ltex",
-				"buf",
+				"buf_ls",
 				--"roslyn",
 			},
 		})

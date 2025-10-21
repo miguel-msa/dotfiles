@@ -8,7 +8,7 @@ return {
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"black", -- python formatter
-				"pylint",
+				"ruff", -- python linter
 				"eslint_d",
 				"sqlfluff",
 				"sql-formatter",
